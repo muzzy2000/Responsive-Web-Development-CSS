@@ -62,8 +62,15 @@ table {
     --black: #000000;
 }   
 
-h1 h2 h3 {
+h1, h2, h3 {
     font-family: "Molle", cursive;
     font-weight: 400;
     font-style: italic;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
