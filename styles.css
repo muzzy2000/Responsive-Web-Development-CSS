@@ -68,6 +68,14 @@ h1, h2, h3 {
     font-style: italic;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 h4, p, q, small, nav, button, form {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -75,16 +83,26 @@ h4, p, q, small, nav, button, form {
     font-style: normal;
 }
 
-li{
-    border-bottom: 2px solid var(--black);
-    text-decoration: none;
-}
 
 header {
     background-image: linear-gradient(360deg, transparent 0 40%, #55BCD5 80% 100%);
     border-radius:0 0 10px 10px;
     padding:10px;
   }
+
+  .sr-only {
+    visibility: hidden;
+}
+
+#menu-toggle {
+    display: block;
+    
+}
+
+li{
+    border-bottom: 2px solid var(--black);
+    text-decoration: none;
+}
 
   footer {
     background-color: var(--light-gray);
@@ -138,14 +156,38 @@ select{
 	color: var(--dk-gray);
 }
 
+#testimonials h3 {
+    font-size: 2rem;
+}
 
+#testimonials h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+section q {
+    font-style: italic;
+    quotes: initial;
+}
 
 @media screen and (min-width: 320px) {
 
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
    #image-grid {
        display: grid;
-       grid-gap: 0.75em;
-       margin: 1em 0;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-gap: 1em;   
+   }
+
+   picture {
+        display: block;
+
    }
 
    #plan {
@@ -159,10 +201,19 @@ select{
     margin: 0;
    }
 
-   img{
+   #testimonials {
+    text-align: center
+   }
+
+   #testimonials img{
        width: 120px;
        max-width: 120px;
    } 
+
+   #testimonials img{
+        padding: 1rem;
+   }
+  
 }
 
 @media screen and (min-width: 750px) {
@@ -184,7 +235,7 @@ select{
      margin: 0;
     }
  
-    img{
+    #testimonials img{
         width: 120px;
         max-width: 120px;
     } 
@@ -209,7 +260,7 @@ select{
      margin: 0;
     }
  
-    img{
+    #testimonials img {
         width: 120px;
         max-width: 120px;
     } 
